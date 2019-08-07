@@ -14,7 +14,14 @@ public class browser {
 		driver.get("https://www.amazon.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.navigate().refresh();
+		String Expected="Amazon";
+		String actual=driver.getTitle();
+		if(actual.equals(Expected)) {
+			System.out.println("Test Pass");
+		}
+		else
+			System.out.println("Test Fail");
+		driver.navigate().back();
 		driver.close();
 		System.out.println("Hello");
 		
