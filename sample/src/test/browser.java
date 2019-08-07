@@ -16,6 +16,7 @@ public class browser {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.navigate().refresh();
 		driver.close();
+		System.out.println("Hello");
 		
 	}
 
